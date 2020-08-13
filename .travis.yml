@@ -1,0 +1,15 @@
+dist: trusty
+sudo: required
+
+services: docker
+
+language: node_js
+node_js:
+  - "12"
+
+before_install:
+
+script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin
+  - docker build -t $DOCKER_USER/prueba.travis:latest .
+  - docker push $DOCKER_USER/prueba.travis:latest
