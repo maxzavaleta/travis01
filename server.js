@@ -11,7 +11,7 @@ app.get('/json', (req,res)=>{
     res.json({
         from:stage,
         status:true,
-        data:"Hola Mundo",
+        data:"Hola Mundo v1",
         timestamp: new Date()
     })
 })
