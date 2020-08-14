@@ -1,11 +1,9 @@
 dist: trusty
 sudo: required
 
-services: docker
+services: 
 
-language: node_js
-node_js:
-  - "12"
+language: 
 
 before_install:
 
